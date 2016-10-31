@@ -12,24 +12,7 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
 // bower:scss
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-.thumbnail {
-  height: 200px;
-
-  img.pull-right {
-    width: 50px;
-  }
-}
-
 body {
-  /*padding-top: 20px;*/
-  /*background-image: url("img/clouds2.jpg");*/
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -38,44 +21,72 @@ body {
 
 
 .head{
-  background-color: rgba(0,82,156,1.0);
-}
-
-.head p{
-  font-size: 60px;
-  color:whitesmoke;
-}
-
-p {
- // padding: 5px;
+  background-color: rgb(0, 121, 107);
+  p{
+    font-size: 60px;
+    color:#FFFFFF;
+  }
 }
 
 .form{
-    width:100%;
+  width:100%;
+  p{
+    font-weight: bold;
+  }
+}
+
+.search{
+  background-color: #FFC107;
 }
 
 .inputField{
   width:50%;
   display:block;
   margin:auto;
-}
-
-.menu-weather{
-  text-align:center;
-}
-
-.menu-weather li{
-  display:inline-block;
+  color:#212121;
   text-align: center;
 }
 
+.flexContain{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height:360px;
+  color:#212121;
+  }
+
+@media only screen and (max-width: 767px) {
+  .flexContain{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height:130px;
+    padding-bottom: 5px;
+  }
+}
+
+.flexItem{
+  display:flex;
+  align-self: center;
+}
+
+.textX{
+  background-color: #00796B;
+  color: floralwhite;
+;
+}
+
+.textY{
+  background-color: #FFC107;
+  color: black;
+}
+
 .plot{
-  width:100%;
+
   display:flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
 }
 
 /**

@@ -10,11 +10,6 @@
       .when('/', {
       templateUrl: 'app/main/main.html'
     })
-
-      .when('/forecast', {
-        template:' <forecast></forecast>'
-      })
-
       .otherwise({
         redirectTo: '/'
       });

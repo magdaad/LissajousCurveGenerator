@@ -4,7 +4,5 @@
 
   angular
     .module('lissajous')
-    .constant('malarkey', malarkey)
-    .constant('moment', moment);
 
 })();
