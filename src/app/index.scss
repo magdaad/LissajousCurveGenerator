@@ -12,6 +12,11 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
 // bower:scss
 // endbower
 
+$heightOfLissajous : 547px;
+$secondaryTextColor: #757575;
+$darkPrimaryColor : #00796B;
+$accentColor : #FFC107;
+
 body {
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,71 +24,92 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-
-.head{
-  background-color: rgb(0, 121, 107);
-  p{
+.head {
+  background-color: $darkPrimaryColor;
+  p {
     font-size: 60px;
-    color:#FFFFFF;
+    color: #FFFFFF;
   }
 }
 
-.form{
-  width:100%;
-  p{
+.form {
+  width: 100%;
+  p {
     font-weight: bold;
   }
 }
 
-.search{
-  background-color: #FFC107;
+.search {
+  background-color: $accentColor;
+  height: $heightOfLissajous;
 }
 
-.inputField{
-  width:50%;
-  display:block;
-  margin:auto;
-  color:#212121;
+#firstEquation {
+  background-color: #FFECB3;
+}
+
+#secondEquation {
+  background-color: #B2DFDB;
+}
+
+.plotContain {
+  height: $heightOfLissajous;
+  color: $secondaryTextColor;
+}
+
+.inputField {
+  width: 50%;
+  display: block;
+  margin: auto;
+  color: #212121;
   text-align: center;
 }
 
-.flexContain{
+.flexContain {
   display: flex;
   align-content: center;
   justify-content: center;
-  height:360px;
-  color:#212121;
-  }
+  height: 350px;
+  color: #212121;
+}
 
 @media only screen and (max-width: 767px) {
-  .flexContain{
+  .flexContain {
     display: flex;
     align-content: center;
     justify-content: center;
-    height:130px;
+    height: 130px;
     padding-bottom: 5px;
+  }
+
+  .plotContain {
+    height: auto;
+  }
+
+  .search {
+    background-color: $accentColor;
+    height: auto;
   }
 }
 
-.flexItem{
-  display:flex;
+.flexItem {
+  display: flex;
   align-self: center;
 }
 
-.textX{
-  background-color: #00796B;
-  color: floralwhite;
-;
+.textX {
+  background-color: $darkPrimaryColor;
+  color: floralwhite;;
 }
 
-.textY{
-  background-color: #FFC107;
+.textY {
+  background-color: $accentColor;
   color: black;
 }
 
-.plot{
+.plot {
 
-  display:flex;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;

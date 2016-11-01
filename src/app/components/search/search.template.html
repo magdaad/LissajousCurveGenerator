@@ -1,46 +1,73 @@
-<div class="container-fluid ">
-<div class="form-group" >
-  <h3>
+<div class="container-fluid">
 
-    <h3 align="center" style="color:#757575">Type in your parameters:</h3>
-    <div class="form">
-      <div class="row">
-        <p class="col-lg-1 col-md-1  col-sm-1 col-xs-1">A1: </p>
-        <input type="text" class="form-control inputField"
-                        ng-model="A1"
-                        placeholder="A1"/><br>
+  <div class="form-group">
+    <h3>
+
+      <h3 align="center" style="color:#757575">Type in your parameters:</h3>
+      <div class="form">
+        <div class="row">
+          <p class="col-lg-1 col-md-1  col-sm-1 col-xs-1">A1: </p>
+          <input type="text" class="form-control inputField"
+                 ng-model="A1"
+                 ng-change="search()"
+                 placeholder="A1"/>
+          <md-slider flex min="0" max="100" ng-change="search()" ng-model="A1" aria-label="red">
+
+        </div>
+        <div class="row">
+          <p class="col-lg-1  col-md-1  col-sm-1  col-xs-1 ">A2: </p>
+          <input type="text" class="form-control inputField"
+                 ng-model="A2"
+                 ng-change="search()"
+                 placeholder="A2"/>
+          <md-slider flex min="0" max="100" ng-change="search()" ng-model="A2" aria-label="red">
+
+        </div>
+        <div class="row">
+          <p class="col-lg-1  col-md-1  col-sm-1  col-xs-1 ">&omega;1: </p>
+          <input type="text" class="form-control inputField"
+                 ng-model="W1"
+                 ng-change="search()"
+                 placeholder="&omega;1"/>
+          <md-slider flex min="0" max="100" ng-change="search()" ng-model="W1" aria-label="red">
+          </md-slider>
+        </div>
+        <div class="row">
+          <p class="col-lg-1  col-md-1  col-sm-1  col-xs-1 ">&omega;2: </p>
+          <input type="text" class="form-control inputField"
+                 ng-model="W2"
+                 ng-change="search()"
+                 placeholder="&omega;2"/>
+          <md-slider flex min="0" max="100" ng-change="search()" ng-model="W2" aria-label="red"></md-slider>
+
+        </div>
+        <div class="row">
+          <p class="col-lg-1  col-md-1  col-sm-1  col-xs-1 ">phase: </p>
+          <input type="text" class="form-control inputField"
+                 ng-model="phase"
+                 ng-change="search()"
+                 placeholder="&phi;"/>
+          <md-slider flex min="0" max="360" ng-change="search()" ng-model="phase" aria-label="red"></md-slider>
+        </div>
       </div>
-      <div class="row">
-        <p class="col-lg-1  col-md-1  col-sm-1  col-xs-1 ">A2: </p>
-        <input type="text" class="form-control inputField"
-                         ng-model="A2"
-                         placeholder="A2"/><br>
-      </div>
-      <div class="row">
-        <p class="col-lg-1  col-md-1  col-sm-1  col-xs-1 ">W1: </p>
-        <input type="text" class="form-control inputField"
-                         ng-model="W1"
-                         placeholder="&omega;1"/><br>
-      </div>
-      <div class="row">
-        <p class="col-lg-1  col-md-1  col-sm-1  col-xs-1 ">W2: </p>
-        <input type="text" class="form-control inputField"
-                        ng-model="W2"
-                        placeholder="&omega;2"/><br>
-      </div>
-      <div class="row">
-        <p class="col-lg-1  col-md-1  col-sm-1  col-xs-1 ">phase: </p>
-        <input type="text" class="form-control inputField"
-                        ng-model="phase"
-                        placeholder="&phi;"/><br>
-      </div>
-    </div>
-    <button type="submit" style="padding-left:40px; padding-right:40px; background-color: #00796B"
-            class="btn btn-success col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2"
-            ng-click="search()">DRAW
+      <button type="submit" style="padding-left:40px; padding-right:40px; background-color: #00796B"
+              class="btn btn-success col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2"
+              ng-click="search()">DRAW
+      </button>
+    </h3>
+    <br>
+    <br>
+  </div>
+
+</div>
+
+<script type="text/ng-template" id="templateId">
+  <div class="ngdialog-message">
+    <h4>All parameters must be numbers.</h4>
+  </div>
+  <div class="ngdialog-buttons">
+    <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog('button')">
+      Cancel
     </button>
-  </h3>
-  <br>
-  <br>
-</div>
-</div>
+  </div>
+</script>

@@ -6,7 +6,7 @@
     .factory('PlotYeqService', PlotYeqService);
 
   /** @ngInject */
-  function PlotYeqService($log) {
+  function PlotYeqService($window) {
 
     var factory = {
       plotYequation: plotYequation
@@ -19,23 +19,32 @@
       model.A2 = A2;
       model.W2 = W2;
 
-      $log.info(model.A2);
-
-      //model.domainY = model.A1;
-      //model.domainX = model.A1;
-
+      var domain = parseInt(model.A2);
       model.yequation = model.A2 + '*sin(' + model.W2 + '*x)';
 
+
+      function getPlotWidth(){
+        var plotwidth;
+        var screenW = $window.innerWidth;
+        if(screenW>=1000) {plotwidth = 650}
+        else
+        if(screenW>767) {plotwidth = 500}
+        else
+        if(screenW<=767){plotwidth = screenW - 50}
+
+        return plotwidth
+      }
+
+      //noinspection JSUnresolvedFunction
       functionPlot({
         target: '#secondEquation',
+        yAxis: {domain: [-domain - 1, domain + 1]},
+        xAxis: {domain: [-3, 3]},
+        width:getPlotWidth(),
         data: [{
           fn: model.yequation
         }]
       });
-    }
-
-    function displayError() {
-      $log.debug('error');
     }
 
   }

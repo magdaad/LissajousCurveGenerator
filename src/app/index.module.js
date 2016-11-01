@@ -8,7 +8,10 @@
       'ngSanitize',
       'ngRoute',
       'toastr',
-      'search'
+      'search',
+      'ngDialog',
+      "ngMaterial",
+      "ngResize"
     ]);
 
 })();

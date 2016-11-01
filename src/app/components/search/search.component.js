@@ -1,35 +1,40 @@
 'use strict';
 
 angular.module('search')
-        .component('search', {
-            templateUrl: 'app/components/search/search.template.html',
-            controller: function SearchController($rootScope, $scope, $log) {
+  .component('search', {
+    templateUrl: 'app/components/search/search.template.html',
+    controller: function SearchController($rootScope, $scope, ngDialog, $log) {
 
-                $scope.search = function () {
+      $scope.A1 = 5;
+      $scope.A2 = 8;
+      $scope.W1 = 5;
+      $scope.W2 = 8;
+      $scope.phase = 150;
 
-                  if (angular.isNumber($scope.A1) && angular.isNumber($scope.A2) && angular.isNumber($scope.W1) &&
-                    angular.isNumber($scope.W2) &&angular.isNumber($scope.phase)){
+      $scope.search = function () {
 
-                    $scope.searchEntry = {
-                      A1:$scope.A1,
-                      A2:$scope.A2,
-                      W1:$scope.W1,
-                      W2:$scope.W2,
-                      phase:$scope.phase
-                    };
+        if (!((isNaN($scope.A1) || isNaN($scope.A2) || isNaN($scope.W1) ||
+          isNaN($scope.W2) || isNaN($scope.phase)))) {
 
-                    $rootScope.$broadcast('search-start', $scope.searchEntry);
-                  }
+          $scope.searchEntry = {
+            A1: $scope.A1,
+            A2: $scope.A2,
+            W1: $scope.W1,
+            W2: $scope.W2,
+            phase: $scope.phase
+          };
 
-                  else {
-                   $scope.displayError($scope.A1);
-                  }
-                };
+          $rootScope.$broadcast('search-start', $scope.searchEntry);
+        }
 
-                $scope.displayError = function (value) {
-                  console.log(value + " is not a number");
-                }
+        else {
+          $scope.displayError($scope.A1);
+        }
+      };
 
-
-            }
-        });
+      $scope.displayError = function (value) {
+        $log.error(value + " is not a number");
+        ngDialog.open({template: 'templateId'});
+      };
+    }
+  });
