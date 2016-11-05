@@ -2,8 +2,6 @@
  *  If you want to override some bootstrap variables, you have to change values here.
  *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
  */
-$navbar-inverse-link-color: #5AADBB;
-$icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
 
 /**
  *  Do not remove the comments below. It's the markers used by wiredep to inject
@@ -18,9 +16,7 @@ $darkPrimaryColor : #00796B;
 $accentColor : #FFC107;
 
 body {
-  background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -67,9 +63,8 @@ body {
 
 .flexContain {
   display: flex;
-  align-content: center;
   justify-content: center;
-  height: 350px;
+  height: 355px;
   color: #212121;
 }
 
@@ -95,7 +90,7 @@ body {
 .flexItem {
   display: flex;
   align-self: center;
-}
+ }
 
 .textX {
   background-color: $darkPrimaryColor;

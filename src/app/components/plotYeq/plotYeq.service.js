@@ -40,6 +40,7 @@
         target: '#secondEquation',
         yAxis: {domain: [-domain - 1, domain + 1]},
         xAxis: {domain: [-3, 3]},
+        height:355,
         width:getPlotWidth(),
         data: [{
           fn: model.yequation
