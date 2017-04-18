@@ -1,4 +1,5 @@
 <b>Lissajous Curve Generator.</b>
+
 Just type in your coefficients and the plot will be generated for you!
 
 <i>Project made using AngularJS and Plot.js library. </i>
