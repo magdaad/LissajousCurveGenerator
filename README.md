@@ -4,7 +4,7 @@ Just type in your coefficients and the plot will be generated for you!
 
 <i>Project made using AngularJS and Plot.js library. </i>
 
-<b>setting up the environment:</b>
+<b>Setting up the environment:</b>
 
 install node.js and git (required for bower):
 
