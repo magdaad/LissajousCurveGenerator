@@ -1,4 +1,7 @@
-setting up the environment:
+Lissajous Curve Generator. Just type in your coefficients and the plot will be generated for you!
+Project made using AngularJS and Plot.js library. 
+
+<b>setting up the environment:</b>
 
 install node.js and git (required for bower):
 
